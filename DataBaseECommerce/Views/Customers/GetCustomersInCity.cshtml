@@ -1,0 +1,18 @@
+﻿@model List<DataBaseECommerce.Customer>
+@{
+    ViewBag.Title = "GetCustomersInCity";
+}
+
+<h2>GetCustomersInCity</h2>
+<ul>
+    @foreach (var customerName in Model)
+    {
+       <li>@customerName.Name</li>
+    }
+</ul>
+@using (Html.BeginForm())
+{
+    @Html.DropDownList("City", "Choose City") <br />
+    <input type="submit" value="Select city" />
+}
+
