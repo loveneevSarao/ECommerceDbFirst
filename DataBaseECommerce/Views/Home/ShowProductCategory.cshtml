@@ -1,0 +1,16 @@
+﻿@model  List<DataBaseECommerce.Controllers.ProductCategory>
+@{
+    ViewBag.Title = "ShowProductCategory";
+}
+
+<h2>ShowProductCategory</h2>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            @Html.ActionLink(@item.ProductName, "ShowProductDetails", new { id = item.ProductId })
+            is in Category @item.CategoryName
+        </li>
+    }
+</ul>
+

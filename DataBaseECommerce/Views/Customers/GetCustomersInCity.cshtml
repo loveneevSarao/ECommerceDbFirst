@@ -5,10 +5,14 @@
 
 <h2>GetCustomersInCity</h2>
 <ul>
-    @foreach (var customerName in Model)
+    @if (Model != null)
     {
-       <li>@customerName.Name</li>
+        foreach (var customerName in Model)
+        {
+            <li>@customerName.Name</li>
+        }
     }
+
 </ul>
 @using (Html.BeginForm())
 {
